@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "./weather-icons.min.css";
+
+.app-background {
+  background-image: url('../assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}

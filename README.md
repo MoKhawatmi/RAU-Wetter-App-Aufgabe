@@ -1,69 +1,44 @@
-# React + TypeScript + Vite
+# Wettervorhersage-App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Eine moderne Wettervorhersage-Anwendung, entwickelt mit **React**, **TypeScript** und **TailwindCSS**. Die App verwendet die **Open-Meteo-API**, um in Echtzeit Wetterdaten für beliebige Städte in Deutschland abzurufen.
 
-Currently, two official plugins are available:
+## Funktionen
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Aktuelle Wetterdaten auf Basis der Geokoordinaten deutscher Städte
+- Direkte Stadtvorschläge während der Eingabe (ab 3 Zeichen)
+- Anzeige von Temperatur, Windgeschwindigkeit, Wetterzustand und Uhrzeit
+- Sauberes, responsives Design mit TailwindCSS und SCSS
+- Nutzung von Wettercodes zur Visualisierung der Wetterlage mit Icons
 
-## Expanding the ESLint configuration
+## Installation und Ausführung
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Projekt herunterladen oder klonen:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+   ```bash
+   git clone <repository-url>
+   cd <projektverzeichnis>
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+2. Abhängigkeiten installieren:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+   ```bash
+   npm install
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. Entwicklungsserver starten:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+   ```bash
+   npm run dev
+   ```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4. Anwendung im Browser öffnen:
+
+   Besuchen Sie die in der Konsole angegebene Adresse (standardmäßig `http://localhost:5173`)
+
+## Technologien
+
+- React (mit Vite)
+- TypeScript
+- TailwindCSS 
+- Axios für HTTP-Anfragen
+- Open-Meteo Geocoding & Forecast APIs
